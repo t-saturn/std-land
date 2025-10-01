@@ -129,13 +129,14 @@ export function Navbar() {
               </div>
 
               {/* Login Button */}
-              <Link
-                to={"/sgd/login.do"}
+              <a
+                href={"/sgd/login.do"}
+                target="_blank"
                 className={`flex items-center gap-2 px-6 py-3 text-sm font-semibold transition-all duration-300 rounded-xl transform hover:scale-105 bg-primary text-primary-foreground shadow-lg hover:shadow-xl`}
               >
                 <LogIn className="h-4 w-4" />
                 <span>Ingresar</span>
-              </Link>
+              </a>
 
               {/* Mobile Menu Button */}
               <button
