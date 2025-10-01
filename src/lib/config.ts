@@ -1,6 +1,6 @@
 /* AUTO-GENERATED FILE — DO NOT EDIT
-   Source: scripts/config/conf.yml
-   Command: python apply_config_ts.py --schema scripts/config/conf.yml --out std-land/src/lib/config.ts
+   Source: scripts/config/conf-std-land.yml
+   Command: python apply_config_ts.py --schema scripts/config/conf-std-land.yml --out std-land/src/lib/config.ts
 */
 export const appConfig = {
   system: {
