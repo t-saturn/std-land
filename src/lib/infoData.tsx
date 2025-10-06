@@ -139,6 +139,18 @@ export const resources = {
     //   thumbnail: `https://img.youtube.com/vi/HOJAtfvjfuk/maxresdefault.jpg`,
     //   publishedAt: "Abril 2025"
     // },
+
+    {
+      id: "",
+      title: "",
+      description: "",
+      duration: "",
+      views: "",
+      category: "",
+      difficulty: "",
+      thumbnail: ``,
+      publishedAt: ""
+    },
   ]
 };
 

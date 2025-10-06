@@ -267,7 +267,7 @@ export default function InfoPage() {
               </div>
 
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {resources.videos.map((video, index) => (
+                {resources.videos && resources.videos.map((video, index) => (
                   <motion.div
                     key={index}
                     variants={itemVariants}
