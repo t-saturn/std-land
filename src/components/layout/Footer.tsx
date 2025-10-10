@@ -1,3 +1,4 @@
+import appConfig from "@/lib/config";
 import { entidad, moduleDetail, navigationLinks, services, socialNetworks } from "@/lib/data";
 import {
   Mail, 
@@ -42,7 +43,7 @@ export function Footer() {
                 <div className="relative">
                   <img
                     src="/images/logo.png"
-                    alt="GORE Ayacucho"
+                    alt={appConfig.entity.name}
                     className="w-12 h-12 rounded-full object-contain"
                   />
                 </div>

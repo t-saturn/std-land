@@ -96,15 +96,15 @@ export function HeroSection() {
 
 const AnimatedBackdrop: React.FC = () => (
   <div className="-z-10 absolute inset-0 pointer-events-none">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(210,15,57,0.06),transparent_60%)]" />
-    <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(210,15,57,0.06),transparent)]" />
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(15, 138, 15, 0.06),transparent_60%)]" />
+    <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(23, 196, 46, 0.06),transparent)]" />
     <motion.div
-      className="-top-24 -left-24 absolute bg-[#d20f39]/20 blur-3xl rounded-full w-72 h-72"
+      className="-top-24 -left-24 absolute bg-primary/20 blur-3xl rounded-full w-72 h-72"
       animate={{ x: [0, 20, -10, 0], y: [0, -10, 10, 0], rotate: [0, 15, -10, 0] }}
       transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
     />
     <motion.div
-      className="right-0 bottom-0 absolute bg-rose-500/10 blur-3xl rounded-full w-80 h-80"
+      className="right-0 bottom-0 absolute bg-primary/10 blur-3xl rounded-full w-80 h-80"
       animate={{ x: [0, -15, 10, 0], y: [0, 10, -10, 0] }}
       transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
     />

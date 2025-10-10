@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { entidad, moduleDetail, navigationLinks, services } from "@/lib/data";
+import appConfig from "@/lib/config";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,7 +48,7 @@ export function Navbar() {
               <div className="relative">
                 <img
                   src="/images/logo.png"
-                  alt="GORE Ayacucho"
+                  alt={appConfig.entity.name}
                   className="w-12 h-12 rounded-full shadow-lg object-contain"
                 />
               </div>
@@ -171,13 +172,13 @@ export function Navbar() {
                 <div className="flex items-center gap-3">
                   <img
                     src="/images/logo.png"
-                    alt="GORE Ayacucho"
+                    alt={appConfig.entity.name}
                     className="w-10 h-10 rounded-full object-contain"
                   />
                   <div>
                     <h2 className="font-bold">SGD</h2>
                     <p className="text-xs text-secondary-foreground">
-                      GORE Ayacucho
+                      {appConfig.entity.name}
                     </p>
                   </div>
                 </div>

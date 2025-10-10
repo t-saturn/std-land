@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Monitor, Maximize2, X, Minus, Circle } from "lucide-react";
+import appConfig from "@/lib/config";
 
 export function DocumentDashboardMockup() {
   const [currentView, setCurrentView] = useState(0);
@@ -75,7 +76,7 @@ export function DocumentDashboardMockup() {
           <div className="flex-1 max-w-md mx-4">
             <div className="bg-slate-600 rounded-lg px-3 py-1 text-sm text-slate-300 flex items-center gap-2">
               <Circle className="w-3 h-3 text-green-400 fill-current" />
-              sgd.regionayacucho.gob.pe
+              {appConfig.services.mesaPartes.url}
             </div>
           </div>
           
