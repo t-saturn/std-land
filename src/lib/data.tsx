@@ -72,10 +72,10 @@ export const services = [
     badge: "Productividad",
   },
   {
-    label: "Verificación de documentos",
-    href: "/verifica/inicio.do",
+    label: systemConfig.services.verifica.name,
+    href: systemConfig.services.verifica.url,
     icon: <Shield className="w-4 h-4" />,
-    description: "Verifica la autenticidad de los documentos.",
+    description: systemConfig.services.verifica.description,
     badge: "Seguridad",
   },
   {

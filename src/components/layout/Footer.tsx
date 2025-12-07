@@ -1,21 +1,27 @@
 import appConfig from "@/lib/config";
-import { entidad, moduleDetail, navigationLinks, services, socialNetworks } from "@/lib/data";
 import {
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Shield, 
-  Award, 
+  entidad,
+  moduleDetail,
+  navigationLinks,
+  services,
+  socialNetworks,
+} from "@/lib/data";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Shield,
+  Award,
   ExternalLink,
   ArrowUp,
   Globe,
-  Zap
+  Zap,
 } from "lucide-react";
 
 export function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const currentYear = new Date().getFullYear();
@@ -48,25 +54,39 @@ export function Footer() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-primary-foreground">{moduleDetail.name}</h3>
-                  <p className="text-sm text-muted-foreground">{entidad.razonSocial}</p>
+                  <h3 className="text-xl font-bold text-primary-foreground">
+                    {moduleDetail.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {entidad.razonSocial}
+                  </p>
                 </div>
               </div>
-              
+
               <p className="text-primary-foreground mb-6 leading-relaxed">
-                Sistema de Gestión Documental con firma digital e interoperabilidad 
-                para modernizar la administración pública del {entidad.razonSocial}.
+                Sistema de Gestión Documental con firma digital e
+                interoperabilidad para modernizar la administración pública del{" "}
+                {entidad.razonSocial}.
               </p>
 
               {/* Certifications */}
               <div className="space-y-3">
-                <h4 className="text-sm font-semibold text-primary-foreground mb-3">Certificaciones</h4>
+                <h4 className="text-sm font-semibold text-primary-foreground mb-3">
+                  Certificaciones
+                </h4>
                 {certifications.map((cert, index) => (
-                  <div key={index} className="flex items-center gap-3 p-3 rounded-xl border border-border/10">
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 p-3 rounded-xl border border-border/10"
+                  >
                     <Award className="h-5 w-5 text-chart-4 flex-shrink-0" />
                     <div>
-                      <div className="font-medium text-sm text-primary-foreground">{cert.name}</div>
-                      <div className="text-xs text-muted-foreground">{cert.description}</div>
+                      <div className="font-medium text-sm text-primary-foreground">
+                        {cert.name}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {cert.description}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -87,7 +107,9 @@ export function Footer() {
                       className="group flex items-center gap-2 text-muted-foreground hover:text-primary-foreground transition-all duration-300 py-2"
                     >
                       <div className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">{link.label}</span>
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">
+                        {link.label}
+                      </span>
                       <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-auto" />
                     </a>
                   </li>
@@ -127,7 +149,7 @@ export function Footer() {
                 <Phone className="h-5 w-5 text-chart-5" />
                 Contacto
               </h3>
-              
+
               <div className="space-y-4">
                 {/* Address */}
                 <div className="flex items-start gap-3 p-4 bg-slate-800/30 rounded-xl">
@@ -172,7 +194,9 @@ export function Footer() {
                 <div className="flex items-start gap-3 p-4 bg-slate-800/30 rounded-xl">
                   <Clock className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-medium text-sm">Horario de Atención</div>
+                    <div className="font-medium text-sm">
+                      Horario de Atención
+                    </div>
                     <div className="text-primary-foreground/70 text-sm">
                       {entidad.businessHours}
                     </div>
@@ -189,7 +213,9 @@ export function Footer() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               {/* Social Media */}
               <div className="flex items-center gap-6">
-                <h4 className="text-sm font-semibold text-primary-foreground/70">Síguenos en:</h4>
+                <h4 className="text-sm font-semibold text-primary-foreground/70">
+                  Síguenos en:
+                </h4>
                 <div className="flex gap-4">
                   {socialNetworks.map(({ Icon, href, label, color }) => (
                     <a
@@ -222,12 +248,12 @@ export function Footer() {
                 <div className="flex items-center gap-2">
                   <Shield className="h-4 w-4 text-green-400" />
                   <span>
-                    © {currentYear} {entidad.razonSocial}. 
-                    Todos los derechos reservados.
+                    © {currentYear} {entidad.razonSocial}. Todos los derechos
+                    reservados.
                   </span>
                 </div>
               </div>
-              
+
               {/* Security Badge */}
               <div className="mt-4 flex items-center justify-center gap-4">
                 <div className="flex items-center gap-2 px-3 py-1 bg-green-900/30 text-green-400 rounded-full text-xs border border-green-500/20">

@@ -94,6 +94,11 @@ export const appConfig = {
       description: "Consulta el estado de tus documentos.",
       url: "https://seguimiento.redorange.net.pe/consulta",
     },
+    verifica: {
+      name: "Verificación de documentos",
+      description: "Consulta el estado de tus documentos.",
+      url: "https://verificafirma.redorange.net.pe/consulta",
+    },
   },
 } as const;
 

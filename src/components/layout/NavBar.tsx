@@ -24,13 +24,13 @@ export function Navbar() {
       setIsScrolled(scrollTop > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    
+    window.addEventListener("scroll", handleScroll);
+
     // Verificar el estado inicial
     handleScroll();
-    
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -38,7 +38,9 @@ export function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled ? 'shadow-lg border-b border-border bg-card backdrop-blur-lg' : ''
+          isScrolled
+            ? "shadow-lg border-b border-border bg-card backdrop-blur-lg"
+            : ""
         }`}
       >
         <div className="container mx-auto px-6">
@@ -252,7 +254,10 @@ export function Navbar() {
 
               {/* Login Section */}
               <div className="space-y-3">
-                <Link to={'/sgd/login.do'} className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <Link
+                  to={"/sgd/login.do"}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                >
                   <LogIn className="h-5 w-5" />
                   <span>Ingresar al Sistema</span>
                 </Link>
