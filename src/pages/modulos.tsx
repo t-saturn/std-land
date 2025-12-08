@@ -294,6 +294,7 @@ export default function ModulosPage() {
               return (
                 <motion.div
                   key={index}
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   variants={itemVariants as any}
                   onMouseEnter={() => setHoveredModule(index)}
                   onMouseLeave={() => setHoveredModule(null)}

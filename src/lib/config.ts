@@ -99,6 +99,11 @@ export const appConfig = {
       description: "Consulta el estado de tus documentos.",
       url: "https://verificafirma.redorange.net.pe/consulta",
     },
+    mpvio: {
+      name: "Interoperabilidad",
+      description: "Módulo de interoperabilidad con otras entidades.",
+      url: "https://mpvio.redorange.net.pe/",
+    },
   },
 } as const;
 

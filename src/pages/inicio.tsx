@@ -4,7 +4,7 @@ import { HeroSection } from "@/components/views/hero-section";
 import { FeaturesSection } from "@/components/views/feature-card";
 
 export default function Inicio() {
-  const [_activeMetric, setActiveMetric] = useState(0);
+  const [, setActiveMetric] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {

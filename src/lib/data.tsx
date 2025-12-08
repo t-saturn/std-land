@@ -79,10 +79,10 @@ export const services = [
     badge: "Seguridad",
   },
   {
-    label: "Interoperabilidad",
-    href: "/mpv/login.jsf",
+    label: systemConfig.services.mpvio.name,
+    href: systemConfig.services.mpvio.url,
     icon: <Zap className="w-4 h-4" />,
-    description: "Integraciones con PIDE, RENIEC y SUNAT.",
+    description: systemConfig.services.mpvio.description,
     badge: "API",
   },
 ];
