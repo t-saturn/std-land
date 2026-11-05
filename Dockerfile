@@ -1,5 +1,5 @@
 # Etapa de compilación
-FROM node:20-alpine AS build
+FROM node:24-alpine AS build
 WORKDIR /app
 
 # Instala deps (ajusta según tu gestor)

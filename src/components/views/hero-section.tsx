@@ -1,16 +1,9 @@
-import { useState, useEffect } from "react";
 import { ArrowRight, Shield, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { DocumentFlowAnimation } from "./document-animation";
 import systemConfig from "@/lib/config";
 
 export function HeroSection() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Decorative Background */}
@@ -83,13 +76,11 @@ export function HeroSection() {
         </div>
       </div>
 
-      {mounted && (
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-pulse"></div>
-          </div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-pulse"></div>
         </div>
-      )}
+      </div>
     </section>
   );
 }

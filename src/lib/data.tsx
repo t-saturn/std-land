@@ -1,4 +1,5 @@
-import { Clock, Facebook, FileText, Home, Info, Instagram, Shield, Twitter, Zap } from "lucide-react";
+import { Clock, FileText, Home, Info, Shield, Zap } from "lucide-react";
+import { Facebook, Instagram, Twitter } from "@/components/icons/brand-icons";
 import systemConfig from "./config";
 
 export const entidad = {

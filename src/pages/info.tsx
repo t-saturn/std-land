@@ -11,9 +11,9 @@ import {
   CheckCircle,
   Search,
   ExternalLink,
-  Youtube,
   ChevronRight,
 } from "lucide-react";
+import { Youtube } from "@/components/icons/brand-icons";
 import { motion, useInView } from "framer-motion";
 import { faqs, resources } from "@/lib/infoData";
 
