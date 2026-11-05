@@ -1,18 +1,21 @@
-# Etapa de compilación
-FROM node:24-alpine AS build
+# syntax=docker/dockerfile:1.7
+# =====================================================================
+#  sgd-land (Vite). Solo produce el build estático (dist/); en producción
+#  lo sirve Payara: la imagen del SGD (sgd/Dockerfile.stage) la compila
+#  dentro de su propio build. Este archivo sirve para probarla aislada:
+#    docker buildx build --target export -o type=local,dest=./dist .
+# =====================================================================
+ARG BUN_VERSION=1.3.5
+
+FROM scratch AS entity
+
+FROM oven/bun:${BUN_VERSION} AS build
 WORKDIR /app
-
-# Instala deps (ajusta según tu gestor)
-COPY package*.json ./
-RUN npm ci
-
-# Copia el resto y compila
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 COPY . .
-RUN npm run build
+COPY --from=entity / ./
+RUN bun run build
 
-# Etapa "export" (sólo artefacto)
 FROM scratch AS export
 COPY --from=build /app/dist /
-
-
-# docker buildx build  -f .\std-land\Dockerfile  --target export  -o type=local,dest=./std/dist  .\std-land
